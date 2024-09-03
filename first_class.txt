@@ -87,15 +87,16 @@ not	        Reverse the result, returns False if the result is true	not     (x <
 Python Collections (Arrays)
 There are four collection data types in the Python programming language:
 
-List is a collection which is ordered and changeable. Allows duplicate members.
-Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
-Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
-Dictionary is a collection which is ordered** and changeable. No duplicate members.
+List: is a collection which is ordered and changeable. Allows duplicate members.
+Tuple: is a collection which is ordered and unchangeable. Allows duplicate members.
+Set: is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary: is a collection which is ordered** and changeable. No duplicate members.
 
 
 SEQUENCE TYPE
 Lists are used to store multiple items in a single variable.
 Lists are created using square brackets:[]
+List is a special variable, which can hold more than one value at a time.
 
 List Methods
 Python has a set of built-in methods that you can use on lists.
@@ -341,3 +342,585 @@ b = 33
 c = 500
 if a > b and c > a:
   print("Both conditions are True")
+
+  a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+
+
+One line if else statement, with 3 conditions:
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+
+
+NESTED IF
+x = 41
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.")
+
+PYTHON LOOPS
+while loops
+for loops
+
+WHILE LOOP = 1
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+  FOR LOOP
+  A for loop is used for iterating  over a sequence
+  (that is either a list, a tuple, a dictionary, a set, or a string).
+  
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+Exit the loop when x is "banana":
+ BREAK method
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x) 
+  if x == "banana":
+    break
+
+ CONTINUE method
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x) 
+
+  RANGE
+  for x in range(6):
+  print(x) 
+
+Using the start parameter:
+for x in range(2, 6):
+  print(x)
+
+Increment the sequence with 3 (default is 1):
+for x in range(2, 26, 2):
+  print(x)
+
+  for x in range(6):
+  print(x)
+else:
+  print("Finally finished!")
+
+
+# Multiplication table for 2  -> 1st method
+for i in range(1, 11):
+    print(f"2 x {i} = {2 * i}")
+
+# Multiplication table for 2 -> 2nd method
+for i in range(1, 11):
+    result = 2 * i
+    print(f"2 x {i} = {result}")
+
+
+
+
+
+FUNCTION
+A function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+A function can return data as a result.
+In python a function is defined using the def keyword.
+
+Calling a Function
+To call a function, use the function name followed by parenthesis. e.g
+
+def my_function():
+  print("Hello from a function")
+
+my_function()
+
+Arguments
+Information can be passed into functions as arguments.
+Arguments are specified after the function name, inside the parentheses. 
+You can add as many arguments as you want, just separate them with a comma.
+
+def my_function(first_name, last_name):
+  print("Welcome" + first_name, last_name)
+
+my_function("Jamiu", "Kayode")
+
+
+Default Parameter Value
+If we call the function without argument, it uses the default value. e.g
+
+def my_function(country = "Nigeria"):
+  print("I am from " + country)
+
+my_function("USA")
+my_function()
+my_function("Brazil")
+
+
+Return Values
+To let a function return a value, use the return statement. e.g
+
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+
+
+Python LAMBDA
+A lambda function is a small anonymous function.
+
+x = lambda a : a + 10
+print(x(5))
+
+x = lambda a, b : a * b
+print(x(5, 6))
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+
+
+CLASS in python
+Python Classes/Objects
+Python is an object oriented programming language.
+
+The __init__() Function
+Create a class named Person, use the __init__() function
+ to assign values for name and age.
+ Note: The __init__() function is called automatically every time 
+ the class is being used to create a new object.
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+p2 = Person("Jamiu", 30)
+
+print("Hello", p1.name, p1.age)
+print(p2.name, p2.age)
+
+
+MODULES
+What is a Module?
+Consider a module to be the same as a code library.
+A file containing a set of functions you want to include in your application.
+
+Create a Module
+To create a module just save the code you want in a
+ file with the file extension .py.
+
+ def greeting(name):
+  print("Hello, " + name)
+
+  Use a Module
+  Note: When using a function from a module,
+   use the syntax: module_name.function_name.
+
+import mymodule
+mymodule.greeting("Jonathan")
+
+from mymodule import greeting
+greeting("Jonathan")
+greeting("Jamiu")
+
+# a = mymodule.person1
+# print(a)
+# for x in mymodule.person1: 
+#  print(x)
+
+
+# import mymodule as mx
+
+# a = mx.person1["age"]
+# print(a)
+
+# import platform
+
+# x = platform.system()
+# print(x)
+
+# x = dir(mymodule)
+# print(x)
+
+
+# from mymodule import person1
+# print(person1["age"])
+
+
+
+Python Dates
+A date in Python is not a data type of its own, 
+but we can import a module named datetime to work with dates as date objects. e.g
+Import the datetime module and display the current date:
+
+import datetime
+
+x = datetime.datetime.now()
+print(x)
+
+Return year ans weekday
+print(x.year)
+print(x.strftime("%A"))
+
+
+
+Python Math
+MIN and MAX
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+
+print(x)
+print(y)
+
+POW
+Return the value of 4 to the power of 3 (same as 4 * 4 * 4):
+x = pow(4, 3)
+print(x)
+
+The Math Module
+The math.sqrt() method for example, returns the square root of a number:
+import math
+x = math.sqrt(64)
+print(x)
+
+x = math.ceil(1.9) -> rounds a number upwards to the nearest integer
+y = math.floor(1.9) -> rounds a number downwards to the nearest integer
+
+print(x) # returns 2
+print(y) # returns 1
+
+
+Python JSON
+JSON is a syntax for storing and exchanging data.
+JSON is text, written with JavaScript object notation.
+
+Convert from JSON to Python:
+import json
+
+# some JSON:
+x = '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y["age"])
+
+
+
+Convert from Python to JSON:
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+
+
+
+
+REGEX
+import re
+
+#Check if the string starts with "The" and ends with "Spain":
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
+
+if x:
+  print("YES! We have a match!")
+else:
+  print("No match")
+
+
+PIP
+What is PIP?
+PIP is a package manager for Python packages, or modules if you like.
+
+What is a Package?
+A package contains all the files you need for a module.
+Modules are Python code libraries you can include in your project.
+
+Check if PIP is Installed
+pip --version
+
+Using pip to install package
+pip install packageName
+
+
+Using pip to uninstall package
+pip uninstall packageName
+
+List Packages
+Use the list command to list all the packages installed on your system:
+pip list
+
+
+
+Python Try Except
+The -try- block lets you test a block of code for errors.
+The -except- block lets you handle the error.
+The -else- block lets you execute code when there is no error.
+The finally block lets you execute code, regardless of the 
+result of the try- and except blocks.
+
+
+Exception Handling
+When an error occurs, or exception as we call it,
+ Python will normally stop and generate an error message.
+These exceptions can be handled using the try statement:
+
+#The try block will generate an error, because x is not defined:
+try:
+  print(x)
+except:
+  print("An exception occurred")
+
+
+#The try block will generate a NameError, because x is not defined:
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+
+
+In this example, the try block does not generate any error:
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+
+
+Raise an exception
+As a Python developer you can choose to throw an exception if a condition occurs.
+To throw (or raise) an exception, use the raise keyword.
+x = -1
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+
+x = "hello"
+if not type(x) is int:
+  raise TypeError("Only integers are allowed")
+
+name = "samlarry"
+if name == "samlarry":
+  raise NameError("you are not allowed to  to use our website")
+
+Type of errors
+TypeError
+ValueError
+NameError
+
+
+Python User Input
+username = input("Enter username:")
+print("Username is: " + username)
+
+String format()
+The format() method allows you to format selected parts of a string.
+Add a placeholder where you want to display the price:
+
+price = 49
+txt = "The price is {} dollars"
+print(txt.format(price))
+
+Format the price to be displayed as a number with two decimals:
+txt = "The price is {:.2f} dollars"
+
+#named indexes:
+txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
+#numbered indexes:
+txt2 = "My name is {0}, I'm {1}".format("John",36)
+#empty placeholders:
+txt3 = "My name is {}, I'm {}".format("John",36)
+
+print(txt1)
+print(txt2)
+print(txt3)
+
+Multiple Values
+quantity = 3
+itemno = 567
+price = 49
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+
+
+Also, if you want to refer to the same value more 
+than once, use the index number:
+age = 36
+name = "John"
+txt = "His name is {1}. {1} is {0} years old."
+print(txt.format(age, name))
+
+
+Named Indexes
+myorder = "I have a {carname}, it is a {model}."
+print(myorder.format(carname = "Ford", model = "Mustang"))
+
+
+
+
+FILE HANDLING 
+File handling is an important part of any web application.
+Python has several functions for creating, reading, updating, and deleting files
+
+File Handling
+The key function for working with files in Python is the open() function.
+The open() function takes two parameters; filename, and mode.
+There are four different methods (modes) for opening a file:
+
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+"x" - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+"t" - Text - Default value. Text mode
+"b" - Binary - Binary mode (e.g. images)
+
+Note: Make sure the file exists, or else you will get an error.
+
+READ FILES in the same folder
+f = open("script.js")
+print(f.read())
+
+or (another method)
+f = open("jamiu.txt", "r")
+print(f.read())
+
+Return the 5 first characters of the file:
+f = open("file.txt", "r")
+print(f.read(5))
+
+
+READ FILES in another folder on your local laptop
+f = open(r"C:\Users\User\Desktop\Tech\YummyBackend\subcode\apps.py")
+print(f.read())
+
+another sample
+tf = open(r"C:\Users\User\Desktop\Tech\Yummy\cart.js")
+print(tf.read())
+
+Read one line of the file
+f = open("file.txt", "r")
+print(f.readline())
+
+Read two lines of the file:
+f = open("file.txt", "r")
+print(f.readline())
+print(f.readline())
+
+Loop through the file line by line:
+f = open("file.txt", "r")
+for x in f:
+  print(x)
+
+
+It is a good practice to always close the file when you are done with it.
+Example
+Close the file when you are finish with it:
+f = open("file.txt", "r")
+print(f.readline())
+f.close()
+
+
+Write to an Existing File
+To write to an existing file, you must add a parameter to the open() function:
+"a" - Append - will append to the end of the file
+"w" - Write - will overwrite any existing content
+
+f = open("jamiu.txt", "a")     ||  f = open("jamiu.txt", "w")
+f.write(str(29 + 3))
+f.close()
+
+#open and read the file after the appending:
+f = open("jamiu.txt", "r")
+print(f.read())
+
+UPDATING EXISTING FILE IN ANOTHER FOLDER
+f = open(r"C:\Users\User\Desktop\Tech\YummyBackend\subcode\apps.py", "w" )
+f.write(str(29 + 3))
+f.close()
+
+#open and read the file after the appending:
+f = open(r"C:\Users\User\Desktop\Tech\YummyBackend\subcode\apps.py", "r")
+print(f.read())
+
+
+Create a New File
+To create a new file in Python, use the open() method, with one of the following parameters:
+"x" - Create - will create a file, returns an error if the file exist
+"a" - Append - will create a file if the specified file does not exist
+"w" - Write - will create a file if the specified file does not exist
+
+# Create a file called "myfile.txt":
+f = open("myfile.txt", "x")
+f = open("myfile.txt", "w")
+
+
+Delete a File
+To delete a file, you must import the OS module,
+ and run its os.remove() function:
+
+import os
+os.remove("demofile.txt")
+
+Check if File exist:
+To avoid getting an error, you might want
+to check if the file exists before you try to delete it.
+import os
+
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")
+
+
+Delete Folder an empty folder
+To delete an entire folder, use the os.rmdir() method:
+import os
+os.rmdir("foldername")
+Note: You can only remove empty folders.
+
+
+To Remove a Non-Empty folder
+You can use the shutil module, which provides a rmtree() function
+that can remove a directory and all its contents.
+
+import shutil
+# Remove a non-empty directory
+shutil.rmtree("foldername")
+
+
+Important Notes:
+Be Careful: shutil.rmtree() will delete the directory and everything inside
+it permanently, so use it with caution.
+No Confirmation: Unlike moving a file to the recycle bin,
+shutil.rmtree() doesn't provide any confirmation or undo functionality.
+If you're sure you want to delete the directory and its contents,
+the above method will do the job.

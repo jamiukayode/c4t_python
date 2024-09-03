@@ -1,4 +1,4 @@
- # variable and data types
+# variable and data types
 
 
 # string(str) -> string is anything between single or double quote
@@ -20,11 +20,11 @@
 # ertyuijk'"""
 # print(a)
 
-# String length  ->{len} to get a length of  a String 
+# String length  ->{len} to get a length of  a String
 # a = " bola ola "
 # print(len(a))
 
-# Check String ->{in} to check if a certain phrase or character is present in a string. 
+# Check String ->{in} to check if a certain phrase or character is present in a string.
 # text = "I love working with strings"
 # print("love" in text)
 
@@ -32,14 +32,14 @@
 # if "best place" in c4t:
 #     print("best place" in c4t)
 
-# Check if Not -> {not in} to check if a certain phrase or character is not present ina string. 
+# Check if Not -> {not in} to check if a certain phrase or character is not present ina string.
 # x = "python is very easy to learn"
 # if "much" not in x:
 #     print ("Yes, 'much' is not present in a string")
 
 
 # Modify Strings
-# Upper case -> 
+# Upper case ->
 # a = "Python is popular"
 # print(a.upper())
 
@@ -65,10 +65,6 @@
 # print(x)
 
 
-
-
-
-
 # integer (int) it can't store decimal numbers
 # age = 18
 # age = age + 1
@@ -81,14 +77,11 @@
 # print("Your age is :" + str(age))
 
 
-
 # float -> float can store decimal numbers
 # money = 450.5
 # print(type(money))
 # print("Your money is :" + money) TypeError: can only concatenate str (not "float") to str
 # print("Your money is:" + str(money))
-
-
 
 
 # Boolean (True or false) -> it is very useful in if statement
@@ -102,10 +95,8 @@
 # print(enemy)
 
 
-
-
 # MULTIPLE ASSIGNMENT
-#Many Values to Multiple Variables
+# Many Values to Multiple Variables
 # Name, location , age = "Paul", "Lagos", 17
 # print(Name)
 # print(location)
@@ -124,7 +115,6 @@
 # print(x)
 # print(y)
 # print(z)
-
 
 
 # fruits = ["rice", "beans", "bread"]
@@ -156,10 +146,9 @@
 # print(type(z))
 
 
-
 # Python Operators
 # Arithmetic Operators -> it is use with numeric value to perform common mathematical operation.
-# x = 10 
+# x = 10
 # g = 3
 # print (x // g)
 
@@ -181,15 +170,20 @@
 
 #  Logical Operators
 # x = 10
-# print(x > 4 and  x < 10)	
+# print(x > 4 and  x < 10)
 # # print(x < 4 or x <= 10)
 # print(not(x > 4 and  x >= 10) )
 
 
-
 # DATA SEQUENCE
 # LIST
-fruits_list =["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# fruits_list =["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# newlist = ['hello' for x in fruits_list]
+# print(newlist)
+# print(fruits_list)
+# for x in fruits_list:
+#   print(x)
+# [print(x) for x in fruits_list]
 # print(len(fruits_list))
 # print(fruits_list[6])
 # print(fruits_list[-1])
@@ -202,4 +196,63 @@ fruits_list =["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 # del fruits_list
 # fruits_list.clear()
 # print(type(fruits_list))
-print(fruits_list)
+# print(fruits_list)
+
+# fruits_list =[ "melon", "apple", "banana", "cherry", "orange", "kiwi", "mango"]
+# # fruits_list.sort()
+# print(fruits_list.upper())
+
+# fruits_list = ["apple", "banana", "cherry"]
+# # Convert each element in the list to uppercase
+# uppercase_fruits_list = [fruit.upper() for fruit in fruits_list]
+
+# print(uppercase_fruits_list)
+
+# number_list = [100, 50, 65, 82, 23]
+# number_list.sort()
+# print(number_list)
+
+
+# list1 = ["a", "b", "c"]
+# list2 = [1, 2, 3]
+# list3 = list1 + list2
+# print(list3)
+
+
+# List: is a collection which is ordered and changeable. Allows duplicate members.
+# Tuple: is a collection which is ordered and unchangeable. Allows duplicate members.
+# Set: is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+# Dictionary: is a collection which is ordered** and changeable. No duplicate members.
+
+# List [] square bracket
+# Tuple () round bracket
+# set {} curly brackets{}
+
+# first_tuple = ("apple", "banana", "cherry")
+# print(first_tuple)
+
+# thistuple = ("apple", "banana", "cherry")
+# y = list(thistuple)
+# # y.append("orange")   
+# y.remove("banana")
+# thistuple = tuple(y)
+# print(thistuple)
+
+
+# set
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
